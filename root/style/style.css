@@ -88,3 +88,40 @@ li a:active {
     border-radius: 5px;
     color: rgb(255, 255, 255);
 }
+
+/*
+    ------------------------------------------------
+    Seccion del foother 
+    ------------------------------------------------
+*/
+
+footer {
+    background: linear-gradient(135deg, #0a192f 0%, #112240 20%, #233554 50%, #0a192f 100%);
+    width: 100%;
+}
+
+footer p {
+    color: rgb(199, 199, 187);
+}
+
+footer h3 {
+    color: rgb(199, 199, 187);
+}
+
+.footer-img {
+    grid-column: 1 / 5;   /* Ocupa desde la columna 1 hasta la 5 */
+}
+
+.footer-contact {
+    grid-column: 5 / 8;   /* Ocupa de la 5 a la 8 */
+}
+
+.footer-info {
+    grid-column: 8 / 13;  /* Ocupa de la 8 a la 13 (el final) */
+}
+
+/* Opcional: añade esto para que los textos de contacto no queden pegados arriba */
+.footer-contact, .footer-info {
+    align-self: start;
+    padding-top: 15px;
+}
