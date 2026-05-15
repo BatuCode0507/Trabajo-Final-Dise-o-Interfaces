@@ -1,0 +1,90 @@
+/* Declaración de la fuente descargada */
+@font-face {
+    font-family: 'FIDAE-font';
+    src: url(../fonts/Exo2-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'FIDAE-font';
+    src: url(../fonts/Exo2-Regular.ttf);
+}
+
+
+/* 
+    Seteamos el margin y el padding en 0
+    junto con el estilo de fuente para todo el body/documento 
+*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'FIDAE-font', sans-serif;
+}
+
+.grid {
+    display: grid;
+    max-width: 1200px; /* para que el contenido no se estire infinito en monitores gigantes */
+    margin: 0 auto;    /* Centra el contenido del grid */
+    padding: 10px 20px; /* Espacio interno en entre el grid y el body */
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+}
+
+/* --------------------------------------------------
+    Estilos para la barra de navegación de la web
+   --------------------------------------------------
+*/ 
+.navbar {
+    background: linear-gradient(135deg, #0a192f 0%, #112240 20%, #233554 50%, #0a192f 100%);
+    width: 100%;
+}
+
+nav {
+    grid-column: 1 / 13; /* las 12 columnas */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+    grid-column: 1 / 5;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+nav ul {
+    grid-column: 5 / 7;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+}
+
+li {
+    font-size: 25px;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(199, 199, 187);
+}
+
+li a:hover {
+    background-color: rgba(117, 117, 117, 0.5);
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+li a:active {
+    background-color: rgba(217, 218, 221, 0.5);
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+.active {
+    background-color: rgba(243, 244, 247, 0.5);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
