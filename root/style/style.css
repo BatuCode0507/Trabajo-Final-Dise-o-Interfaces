@@ -34,7 +34,7 @@ body {
    --------------------------------------------------
 */ 
 .navbar {
-    background: linear-gradient(135deg, #0a192f 0%, #112240 20%, #233554 50%, #0a192f 100%);
+    background: linear-gradient(135deg, #051329 0%, #0a2246 25%, #0f4294 60%, #051329 100%);
     width: 100%;
 }
 
@@ -45,10 +45,10 @@ nav {
     align-items: center;
 }
 
-.logo {
+.hero {
     width: 120px;
     grid-column: 1 / 5;
-    border: 1px solid rgb(255, 255, 255);
+    background-image: linear-gradient(135deg, #31476e 0%, #1c2b47 50%), url(../assets/Logo.png);
     padding: 5px;
     border-radius: 10px;
 }
@@ -89,6 +89,18 @@ li a:active {
     color: rgb(255, 255, 255);
 }
 
+/* 
+    -----------------------------------------------
+    Section del index
+    -----------------------------------------------
+*/
+
+.imageBackground {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /*
     ------------------------------------------------
     Seccion del foother 
@@ -96,7 +108,7 @@ li a:active {
 */
 
 footer {
-    background: linear-gradient(135deg, #0a192f 0%, #112240 20%, #233554 50%, #0a192f 100%);
+    background: linear-gradient(135deg, #051329 0%, #0a2246 25%, #0f4294 60%, #051329 100%);
     width: 100%;
 }
 
@@ -120,8 +132,104 @@ footer h3 {
     grid-column: 8 / 13;  /* Ocupa de la 8 a la 13 (el final) */
 }
 
-/* Opcional: añade esto para que los textos de contacto no queden pegados arriba */
+/* Los textos de contacto no queden pegados arriba */
 .footer-contact, .footer-info {
     align-self: start;
     padding-top: 15px;
+}
+
+/*
+    --------------------------------------------
+    Sección formulario...
+    --------------------------------------------
+*/
+
+.ticket-texts {
+    text-align: center;
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, #040d1a 0%, #07172e 25%, #0d2854 50%, #07172e 75%, #051021 100%);
+    color: aliceblue;
+    padding: 30px 10px;
+}
+
+form {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 420px;
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    background-color: #f8fafc;
+}
+
+.form-title {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+.form-section p {
+    font-weight: 300;
+    text-align: center;
+}
+
+.formGroup {
+    display: flex;
+    position: relative;
+    flex-direction: column; /* Apila el label arriba y el input abajo */
+    gap: 8px;              /* Controla el espacio exacto entre el label y su input */
+    margin-bottom: 20px;   /* Separa un grupo de campos del siguiente */
+}
+
+/* Estilizado Inputs type name, email y Select */
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup select {
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'FIDAE-font';
+    background-color: #fff;
+}
+
+.formGroup label {
+    align-items: flex-start;
+}
+
+.formGroup-checkbox {
+    display: flex;
+    flex-direction: row;    /* Los pone uno al lado del otro */
+    align-items: center;    /* Centra verticalmente el cuadrito con el texto */
+    justify-content: center;/* Lo centra en la pantalla según tu diseño */
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.formGroup-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+}
+
+/* Estilizado Inputs type submit y reset */
+.formGroup-button input[type="submit"],
+.formGroup-button input[type="reset"] {
+    padding: 14px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: aliceblue;
+    background: linear-gradient(90deg, #040d1a 0%, #07172e 25%, #0d2854 50%, #07172e 75%, #051021 100%);
+    width: 100%;
+    max-width: 420px;
 }

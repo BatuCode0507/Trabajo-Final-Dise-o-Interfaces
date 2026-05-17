@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Parcial 2 FIDAE 2026</title>
+</head>
+<body>
+    <header class="navbar"> 
+        <div class="grid"> <nav>
+                <a href="../index.html"><img class="hero" src="../assets/Logo.png" alt="Logo image"></a>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./Excibitions.html">Exhibitions</a></li>
+                    <li><a href="./Calendar.html">Calendar</a></li>
+                    <li><a class="active" href="./Ticket.html">Ticket</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="ticket-texts">
+            <h2>Tikets</h2>
+            <p>Secure your place at FIDAE 2026. Complete registration and reserve your spot now.</p>
+        </div>
+        <div class="form-section">
+            <form> 
+                <h2 class="form-title">Get your Entrance</h2>
+                <p>You don't have your ticket yet? Get it Now!</p>
+
+                <div class="formGroup">
+                    <label for="name">Name *</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your Name" required autofocus>
+                </div>
+                
+                <div class="formGroup">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" name="lastName" id="lastName" placeholder="Enter your Last Name" required>
+                </div>
+                
+                <div class="formGroup">
+                    <label for="email">Email *</label>
+                    <input type="email" name="email" id="email" placeholder="email@gmail.com" required>
+                </div>
+
+                <div class="formGroup">
+                    <label for="country">Country *</label>
+                    <select name="country" id="country" required>
+                        <option value="" disabled selected>Select your country</option>
+                        <option value="CL">Chile</option>
+                        <option value="AR">Argentina</option>
+                        <option value="BR">Brazil</option>
+                        <option value="US">United States</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="formGroup-checkbox">
+                    <input type="checkbox" name="notification" id="notification" value="notificationActive">
+                    <label for="notification">Receive more information about the event</label>
+                </div>
+
+                <div class="formGroup-button">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="grid">
+            <div class="footer-container">
+                <div class="footer-img">
+                    <img class="hero" src="../assets/Logo.png" alt="Logo image">
+                    <p>Feria Internacional del Aire y del Espacio.</p>
+                    <p>Descubre las últimas innovaciones tecnológicas y aeronáuticas.</p>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>info@fidae.cl</p>
+                <p>+56 2 2601 1000</p>
+            </div>
+            <div  class="footer-info">
+                <h3>Event Information</h3>
+                <p>April 7-12, 2026</p>
+                <p>Arturo Merino Benítez International Airport</p>
+                <p>Santiago, Chile</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
