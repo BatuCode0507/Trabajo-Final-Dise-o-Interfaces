@@ -22,9 +22,10 @@ body {
 
 .grid {
     display: grid;
-    max-width: 1200px; /* para que el contenido no se estire infinito en monitores gigantes */
-    margin: 0 auto;    /* Centra el contenido del grid */
-    padding: 10px 20px; /* Espacio interno en entre el grid y el body */
+    max-width: 100%;
+    width: 100%;
+    margin: 0;    /* Centra el contenido del grid */
+    padding: 20px; /* Espacio interno en entre el grid y el body */
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
 }
@@ -120,25 +121,16 @@ li a:active {
     ------------------------------------------------
 */
 
-footer {
+.footer .grid {
+    display: flex;                   /* Cambiamos Grid por Flexbox solo para este contenedor */
+    justify-content: space-between;  /* Separa el primer bloque a la izquierda, el último a la derecha y centra el del medio */
+    align-items: flex-start;         /* Alinea los bloques arriba de todo para que queden parejos */
     background: linear-gradient(135deg, #051329 0%, #0a2246 25%, #0f4294 60%, #051329 100%);
     width: 100%;
 }
 
 footer h3 {
     color: rgb(199, 199, 187);
-}
-
-.footer-img {
-    grid-column: 1 / 5;   /* Ocupa desde la columna 1 hasta la 5 */
-}
-
-.footer-contact {
-    grid-column: 5 / 8;   /* Ocupa de la 5 a la 8 */
-}
-
-.footer-info {
-    grid-column: 8 / 13;  /* Ocupa de la 8 a la 13 (el final) */
 }
 
 /* --- Íconos de Contacto --- */
