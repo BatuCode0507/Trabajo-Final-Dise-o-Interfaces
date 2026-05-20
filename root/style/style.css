@@ -115,6 +115,30 @@ li a:active {
     color: aliceblue;
 }
 
+.home-grid h2, h4 {
+    color: rgb(187, 194, 201);
+}
+
+.btn.btn-light {
+    grid-column: 5 / 6;
+    background-image: url(../assets/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 40px;
+    font-weight: 900;
+}
+
+.btn.btn-secondary {
+    grid-column: 6 / 7;
+}
+
+.btn.btn-light a, 
+.btn.btn-secondary a {
+    text-decoration: none;
+    color: black;
+}
+
 /*
     ------------------------------------------------
     Seccion del footer 
@@ -122,7 +146,7 @@ li a:active {
 */
 
 .footer .grid {
-    display: flex;                   /* Cambiamos Grid por Flexbox solo para este contenedor */
+    display: flex;                  
     justify-content: space-between;  /* Separa el primer bloque a la izquierda, el último a la derecha y centra el del medio */
     align-items: flex-start;         /* Alinea los bloques arriba de todo para que queden parejos */
     background: linear-gradient(135deg, #051329 0%, #0a2246 25%, #0f4294 60%, #051329 100%);
