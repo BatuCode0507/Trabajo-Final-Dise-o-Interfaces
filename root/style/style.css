@@ -139,6 +139,62 @@ li a:active {
     color: black;
 }
 
+/* Solo aplica al segundo div si está dentro de .home-page */
+.home-page > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/* Solo aplica al título de Latest News dentro de .home-page */
+.home-page > div:nth-child(3) {
+    display: flex;
+    flex-direction: column; 
+    margin: 0px;
+    padding: 10px 20px;
+    justify-content: flex-start;
+}
+
+/* Solo aplica a las tarjetas de News dentro de .home-page */
+.home-page > div:nth-child(4) {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/*
+    -----------------------
+    Targetas 1, 2 y 3 imágenes .SVG
+    -----------------------
+*/
+
+/* Solo afecta a la tarjeta de Event Dates en el title */
+.home-page > div:nth-child(2) .card:nth-child(1) .card-title {
+    background-image: url(../assets/calendar.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px; /* 2. Control total del tamaño */
+    background-position: left center;  /* 3. Posicionamiento: alineado a la izquierda y centrado verticalmente */
+    padding-left: 35px;  /* 4. Espacio para el texto: mueve el texto 35px a la derecha para no tapar el icono */
+}
+
+/* Solo afecta a la tarjeta de Location en el title */
+.home-page > div:nth-child(2) .card:nth-child(2) .card-title {
+    background-image: url(../assets/location.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px; /* 2. Control total del tamaño */
+    background-position: left center;  /* 3. Posicionamiento: alineado a la izquierda y centrado verticalmente */
+    padding-left: 35px;  /* 4. Espacio para el texto: mueve el texto 35px a la derecha para no tapar el icono */
+}
+
+/* Solo afecta a la tarjeta de Exhibitions en el title */
+.home-page > div:nth-child(2) .card:nth-child(3) .card-title {
+    background-image: url(../assets/newspaper.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px; /* 2. Control total del tamaño */
+    background-position: left center;  /* 3. Posicionamiento: alineado a la izquierda y centrado verticalmente */
+    padding-left: 35px;  /* 4. Espacio para el texto: mueve el texto 35px a la derecha para no tapar el icono */
+}
+
 /*
     ------------------------------------------------
     Seccion del footer 
