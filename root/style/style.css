@@ -418,6 +418,21 @@ form {
     padding-left: 24px;
 }
 
+/*
+    --------------------------------------------------
+    Sección del Excibitions
+    --------------------------------------------------
+*/
+
+.section-excibition h3, p {
+    text-align: center;
+}
+
+.section-excibition h3 {
+    text-align: center;
+    padding-top: 15px;
+}
+
 /*  
     --------------------------------------------------
     Sección del calendar
