@@ -105,22 +105,55 @@ li a:active {
     height: 100%;
 }
 
+.home-section {
+    display: grid;
+    padding: 60px 20px; /* Aumentamos el padding vertical para darle aire al banner */
+    background-image: url(../assets/ImageBackground.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Asegura que el fondo cubra toda la sección sin romperse */
+    width: 100%;
+}
+
 .home-grid {
     grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Mantenemos las 12 columnas internas */
+    row-gap: 15px; /* Espaciado vertical ordenado entre textos y botones */
+    align-items: center;
 }
 
+/* Centramos los textos estirándolos de la columna 1 a la 13 y usando text-align */
 .home-grid h1 {
-    grid-column: 1 / 6;
+    grid-column: 1 / 13;
     font-size: 75px;
     color: aliceblue;
+    text-align: start;
+    margin: 0;
 }
 
-.home-grid h2, h4 {
+.home-grid h2 {
+    grid-column: 1 / 13;
     color: rgb(187, 194, 201);
+    text-align: start;
+    margin: 0;
 }
 
+.home-grid h4 {
+    grid-column: 1 / 13;
+    color: rgb(187, 194, 201);
+    text-align: center;
+    margin: 0;
+}
+
+/* --- Posicionamiento Exacto de los Botones --- */
+
+/* Botón Light: Se ubica en la mitad izquierda (columnas 5 a 7) y se alinea a la derecha */
 .btn.btn-light {
-    grid-column: 5 / 6;
+    grid-column: 5 / 7;
+    justify-self: end; /* Lo pega hacia el centro */
+    margin-right: 10px; /* Separación con el otro botón */
+    
     background-image: url(../assets/arrow-right.svg);
     background-repeat: no-repeat;
     background-position: right 10px center;
@@ -129,14 +162,21 @@ li a:active {
     font-weight: 900;
 }
 
+/* Botón Secondary: Se ubica en la mitad derecha (columnas 7 a 9) y se alinea a la izquierda */
 .btn.btn-secondary {
-    grid-column: 6 / 7;
+    grid-column: 7 / 9;
+    justify-self: start; /* Lo pega hacia el centro */
+    margin-left: 10px; /* Separación con el otro botón */
 }
 
-.btn.btn-light a, 
-.btn.btn-secondary a {
+.btn.btn-light a {
     text-decoration: none;
     color: black;
+}
+
+.btn.btn-secondary a {
+    text-decoration: none;
+    color: white;
 }
 
 /* Solo aplica al segundo div si está dentro de .home-page */
