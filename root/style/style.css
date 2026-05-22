@@ -453,6 +453,10 @@ form {
     gap: 20px;             /* Separación uniforme tanto horizontal como vertical entre tarjetas */
 }
 
+.container-cards-excibitions.card a {
+    font-style: none;
+}
+
 /*  
     --------------------------------------------------
     Sección del calendar
