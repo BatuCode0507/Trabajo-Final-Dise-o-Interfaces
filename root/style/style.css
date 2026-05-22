@@ -453,8 +453,25 @@ form {
     gap: 20px;             /* Separación uniforme tanto horizontal como vertical entre tarjetas */
 }
 
-.container-cards-excibitions.card a {
-    font-style: none;
+/* Efecto Zoom para las Tarjetas de Exhibición */
+
+/* 1. Preparamos la tarjeta en su estado normal para que la animación sea fluida */
+.container-cards-excibitions .card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+}
+
+/* 2. Aplicamos el efecto cuando el mouse pasa por encima (hover) */
+.container-cards-excibitions .card:hover {
+    transform: scale(1.05); /* Agranda la tarjeta un 5% */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4); /* Le da una sombra más profunda para que "resalte" del fondo */
+    z-index: 1; /* Asegura que la tarjeta que se agranda quede por encima de las demás */
+}
+
+/* 3. Evitamos que el texto dentro del enlace <a> se subraye o cambie de color por defecto */
+.container-cards-excibitions .card a {
+    text-decoration: none;
+    color: inherit; 
 }
 
 /*  
