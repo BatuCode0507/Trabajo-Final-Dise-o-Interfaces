@@ -424,13 +424,33 @@ form {
     --------------------------------------------------
 */
 
-.section-excibition h3, p {
+.section-excibition p {
     text-align: center;
 }
 
 .section-excibition h3 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/globe-world.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px;
+    padding-left: 35px;
+    font-weight: 900;
+}
+
+.section-excibition div:nth-child(1) {
+    margin-top: 15px;
     text-align: center;
-    padding-top: 15px;
+}
+
+.container-cards-excibitions {
+    display: flex;
+    flex-wrap: wrap;       /* Permite que las tarjetas bajen a la siguiente fila */
+    justify-content: center; /* Las alinea al inicio para que si hay menos de 4, no se separen mal */
+    padding: 10px 30px;
+    gap: 20px;             /* Separación uniforme tanto horizontal como vertical entre tarjetas */
 }
 
 /*  
