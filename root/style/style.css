@@ -606,3 +606,114 @@ table td > ul > li > h3 {
     @Media Queries - Diseño Responsive
     ------------------------------------------------------------------
 */
+
+/* 1. Laptops y pantallas medianas (Abarca de 1024px hacia abajo) */
+@media (max-width: 1024px) {
+    .home-grid h1 {
+        font-size: 55px; /* de 75px a 55px - lo reducimos un poco*/
+    }
+    
+    .home-grid h4 {
+        font-size: 1.1rem;
+    }
+}
+
+/* 2. Tablets en modo Portrait / Computadoras chicas (Abarca de 991px hacia abajo) */
+@media (max-width: 991px) {
+    /* En el index tenés filas de 3 tarjetas usando flex. 
+       Si no entran en el espacio, bajen ordenadamente */
+    .home-page > div:nth-child(2),
+    .home-page > div:nth-child(4) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    /* El menú de navegación se empieza a quedar sin espacio al reducir la resolución*/
+    nav ul {
+        gap: 10px; /* Reducimos la separación */
+    }
+    li {
+        font-size: 18px; /* Achicamos los textos de 25px */
+    }
+
+    /* El footer pasa de estar en una sola fila a acomodarse mejor */
+    .footer .grid {
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 30px;
+    }
+    
+    /* Hacemos que la tabla del calendario sea scrolleable horizontalmente 
+       para que no destruya el diseño de la pantalla */
+    .calendar {
+        width: 100%;
+        overflow-x: auto; /* Si la tabla supera el ancho, aparece scroll interno */
+    }
+    table {
+        width: 900px; /* Le fijamos un ancho mínimo cómodo para leer las celdas */
+    }
+}
+
+/* 3. Dispositivos móviles (Abarca de 767px hacia abajo) */
+@media (max-width: 767px) {
+    /* --- BARRA DE NAVEGACIÓN --- */
+    nav {
+        flex-direction: column; /* Apilamos el Logo arriba y el menú abajo */
+        gap: 15px;
+    }
+    nav ul {
+        justify-content: center;
+        width: 100%;
+    }
+    li {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    /* --- HERO BANNER (INDEX) --- */
+    .home-section {
+        padding: 30px 10px; /* Reducción de los paddings del contenedor */
+    }
+    .home-grid h1 {
+        font-size: 40px; /* Título para celular */
+        text-align: center;
+    }
+    .home-grid h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    /* Centramos los dos botones y hacemos que ocupen todo el ancho disponible del contenedor div */
+    .btn.btn-light, 
+    .btn.btn-secondary {
+        grid-column: 2 / 12; /* Dejan un margen pequeño a los costados */
+        justify-self: stretch; /* Se estiran por completo al ancho del contenedor */
+        margin: 5px 0;
+        text-align: center;
+    }
+    .btn.btn-light {
+        background-position: right 20px center; /* Reacomodar el .svg de la flecha */
+    }
+
+    /* --- FORMULARIO (TICKETS) --- */
+    .form-section {
+        padding: 2em 1em; /* Evitamos que el formulario quede gigante en el celular */
+    }
+    form {
+        max-width: 100%; /* Toma todo el ancho del dispositivo móvil */
+    }
+
+    /* --- FOOTER --- */
+    .footer .grid {
+        flex-direction: column; /* Apilamos toda la info del footer verticalmente */
+        align-items: center;
+        text-align: center;
+    }
+    /* Centramos los íconos de fondo del footer en mobile */
+    .footer-contact p, 
+    .footer-info p {
+        background-position: left 10px center;
+        display: inline-block;
+        width: 100%;
+    }
+}
