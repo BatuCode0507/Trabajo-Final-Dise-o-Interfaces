@@ -576,7 +576,7 @@ table td > ul > li > h3 {
 .opening,
 .people,
 .ubication {
-    font-size: 900;
+    font-weight: 900;
     background-position: left top 2px; /* Alineación a la izquierda y apenas bajado para alinear con el texto */
     background-size: 14px 14px;        /* 1. Restringimos el tamaño del SVG */
     padding-left: 22px;
@@ -598,3 +598,11 @@ table td > ul > li > h3 {
 .people {
     background-image: url(../assets/people-groupl.svg);
 }
+
+
+
+/*
+    ------------------------------------------------------------------
+    @Media Queries - Diseño Responsive
+    ------------------------------------------------------------------
+*/
