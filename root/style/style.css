@@ -746,11 +746,18 @@ table td > ul > li > h3 {
     }
 
     body section div.calendar table {
-        font-size: 25px;
         max-width: 1600px;
-        margin-right: 200px;
-        margin-left: 200px;
-        padding: 50px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    body section div.calendar th {
+        font-size: 1.8rem;
+    }
+
+    body section div.calendar td {
+        font-size: 1.2rem;
+        line-height: 1.6;
     }
 
 }
@@ -758,7 +765,7 @@ table td > ul > li > h3 {
 /* 3. Laptops y pantallas medianas (Abarca de 1024px hacia abajo) */
 @media (max-width: 1024px) {
     .home-grid h1 {
-        font-size: 55px; /* de 75px a 55px - lo reducimos un poco*/
+        font-size: 55px; /* la fuente, la reducimos un poco*/
     }
     
     .home-grid h4 {
