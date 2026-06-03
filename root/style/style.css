@@ -15,9 +15,12 @@
     junto con el estilo de fuente para todo el body/documento 
 */
 body {
+    display: flex;
     margin: 0;
     padding: 0;
     font-family: 'FIDAE-font', sans-serif; /* Si el navegador no logra interpretar la primera fuente, utilizara la segunda */
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .grid {
@@ -240,6 +243,10 @@ li a:active {
     Seccion del footer 
     ------------------------------------------------
 */
+
+footer {
+    margin-top: auto; /* Empuja el footer al fondo de la pantalla en cualquier resolución */
+}
 
 .footer .grid {
     display: flex;                  
@@ -607,7 +614,148 @@ table td > ul > li > h3 {
     ------------------------------------------------------------------
 */
 
-/* 1. Laptops y pantallas medianas (Abarca de 1024px hacia abajo) */
+/* ---------------- 3. Breakpoint: 2560px (Monitores QHD y UltraWide) ---------------- */
+@media screen and (min-width: 2560px) {
+    
+    body .home-section, 
+    body .presentation {
+        min-height: 80vh;
+    }
+    
+    body .home-section p, 
+    body .presentation .hero-subtitle {
+        max-width: 950px;
+        margin-right: auto;
+        margin-left: auto;
+        line-height: 1.8;
+    }
+    
+    body footer .grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    body section div.calendar table {
+        max-width: 2030px;
+        margin-right: 200px;
+        margin-left: 200px;
+        padding: 50px;
+    }
+
+}
+
+/* ---------------- 2. Breakpoint: 1920px (Full HD Estándar) ---------------- */
+@media screen and (min-width: 1920px) {
+    
+    body .home-section, 
+    body .presentation {
+        min-height: 75vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    body .home-section h1, 
+    body .presentation .hero-title {
+        font-size: 3.8rem;
+        margin-top: 90px;
+    }
+
+    body .card-container, 
+    body .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px; 
+    }
+
+    body section div.calendar table {
+        font-size: 25px;
+        max-width: 1600px;
+        margin-right: 200px;
+        margin-left: 200px;
+        padding: 50px;
+    }
+
+    .form-section {
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 20px;
+    }
+
+    form {
+        width: 700px;
+        max-width: 700px;
+        padding: 40px;
+    }
+
+    form h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    form p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    form label {
+        font-size: 1rem;
+    }
+
+    form input,
+    form select {
+        height: 55px;
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    form button,
+    form .btn {
+        height: 55px;
+        font-size: 1rem;
+        min-width: 140px;
+    }
+
+    form .buttons {
+        gap: 20px;
+    }
+}
+
+/* ---------------- 1. Breakpoint: 1440px (Desktop Pro) ---------------- */
+@media screen and (min-width: 1440px) {
+
+    body .grid {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    body .home-section, 
+    body .presentation {
+        min-height: 65vh; /* El Hero Banner gana presencia vertical */
+    }
+
+    .footer div.grid {
+        margin-right: 0;
+        margin-left: 0;
+        width: 100vw;
+    }
+
+    body section div.calendar table {
+        font-size: 25px;
+        max-width: 1600px;
+        margin-right: 200px;
+        margin-left: 200px;
+        padding: 50px;
+    }
+
+}
+
+/* 3. Laptops y pantallas medianas (Abarca de 1024px hacia abajo) */
 @media (max-width: 1024px) {
     .home-grid h1 {
         font-size: 55px; /* de 75px a 55px - lo reducimos un poco*/
@@ -616,9 +764,10 @@ table td > ul > li > h3 {
     .home-grid h4 {
         font-size: 1.1rem;
     }
+
 }
 
-/* 2. Tablets en modo Portrait / Computadoras chicas (Abarca de 991px hacia abajo) */
+/* 4. Tablets en modo Portrait / Computadoras chicas (Abarca de 991px hacia abajo) */
 @media (max-width: 991px) {
     /* En el index tenés filas de 3 tarjetas usando flex. 
        Si no entran en el espacio, bajen ordenadamente */
@@ -655,7 +804,7 @@ table td > ul > li > h3 {
     }
 }
 
-/* 3. Dispositivos móviles (Abarca de 767px hacia abajo) */
+/* 5. Dispositivos móviles (Abarca de 767px hacia abajo) */
 @media (max-width: 767px) {
     /* --- BARRA DE NAVEGACIÓN --- */
     nav {
@@ -716,4 +865,24 @@ table td > ul > li > h3 {
         display: inline-block;
         width: 100%;
     }
+
+    footer div.footer-info p:nth-child(3){
+        background-size: 25px 25px;
+    }
+}
+
+@media (max-width: 320px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra horizontalmente los li */
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        text-align: center;
+        width: 100%;
+    }
+
 }
