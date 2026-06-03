@@ -617,19 +617,19 @@ table td > ul > li > h3 {
 /* ---------------- 3. Breakpoint: 2560px (Monitores QHD y UltraWide) ---------------- */
 @media screen and (min-width: 2560px) {
     
-    body .home-section, 
+    body .home-section,
     body .presentation {
         min-height: 80vh;
     }
-    
-    body .home-section p, 
+
+    body .home-section p,
     body .presentation .hero-subtitle {
         max-width: 950px;
         margin-right: auto;
         margin-left: auto;
         line-height: 1.8;
     }
-    
+
     body footer .grid {
         display: flex;
         justify-content: space-between;
@@ -640,9 +640,36 @@ table td > ul > li > h3 {
 
     body section div.calendar table {
         max-width: 2030px;
-        margin-right: 200px;
-        margin-left: 200px;
-        padding: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* -------------------------
+       CALENDARIO
+    ------------------------- */
+
+    .calendar h2 {
+        font-size: 3rem;
+    }
+
+    .calendar th {
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+    .calendar td {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        padding: 20px;
+    }
+
+    .calendar td strong,
+    .calendar td h5 {
+        font-size: 1.8rem;
+    }
+
+    .calendar td i {
+        font-size: 1.4rem;
     }
 
 }
