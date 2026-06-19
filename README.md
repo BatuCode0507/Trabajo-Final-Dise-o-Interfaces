@@ -1,5 +1,11 @@
 # Segundo parcial DISEÑO DE INTERFAZ Y EXPERIENCIA DE USUARIO (UX/UI) – FIDAE 2026
 
+
+
+https://github.com/user-attachments/assets/6ff2c6b5-dff8-4521-a174-4ae95e9598dd
+
+
+
 ## 1. Objetivo del sitio web
 
 El propósito fundamental de la plataforma web offline para la Feria Internacional del Aire y del Espacio *(FIDAE 2026)* es consolidar un ecosistema digital centralizado que funcione de manera óptima en entornos locales, garantizando la difusión institucional del evento como tambien la accesibilidad de la información.
